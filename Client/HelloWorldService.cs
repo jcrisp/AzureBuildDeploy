@@ -17,6 +17,9 @@ public interface IHelloWorldService
     
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHelloWorldService/SayHi", ReplyAction="http://tempuri.org/IHelloWorldService/SayHiResponse")]
     string SayHi(string name);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHelloWorldService/FindFirstGreetingUsingSqlAzure", ReplyAction="http://tempuri.org/IHelloWorldService/FindFirstGreetingUsingSqlAzureResponse")]
+    string FindFirstGreetingUsingSqlAzure();
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -56,5 +59,10 @@ public partial class HelloWorldServiceClient : System.ServiceModel.ClientBase<IH
     public string SayHi(string name)
     {
         return base.Channel.SayHi(name);
+    }
+    
+    public string FindFirstGreetingUsingSqlAzure()
+    {
+        return base.Channel.FindFirstGreetingUsingSqlAzure();
     }
 }

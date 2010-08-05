@@ -14,6 +14,8 @@ namespace WCFServiceWebRole
         [OperationContract]
         string SayHi(string name);
 
+        [OperationContract]
+        string FindFirstGreetingUsingSqlAzure();
     }
 
 }
